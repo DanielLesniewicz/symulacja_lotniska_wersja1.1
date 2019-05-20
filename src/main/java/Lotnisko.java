@@ -1,13 +1,17 @@
-import com.sun.tools.javac.jvm.Gen;
-
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Lotnisko{
+public class Lotnisko
+{
 
     List<Pasazerski> magazynPasazerskich = new LinkedList<>();
     List<Towarowy> magazynTowarowych = new LinkedList<>();
     List<Awionetka> magazynAwionetek = new LinkedList<>();
+
+    List<Pasazerski> pasyPasazerskie = new ArrayList<>();
+    List<Towarowy> pasyTowarowe = new ArrayList<>();
+    List<Awionetka> pasyAwionetki = new ArrayList<>();
 
     public Lotnisko()
     {
