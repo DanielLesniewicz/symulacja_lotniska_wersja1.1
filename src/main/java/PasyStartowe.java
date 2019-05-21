@@ -20,7 +20,8 @@ public class PasyStartowe
         pasyPasazerskie.removeAll(pasyPasazerskie);
         for(int i = 0; i < ile; i++)
         {
-            pasyPasazerskie.add(new Pasazerski("Pasazerski" + numer));
+            String str = Integer.toString(numer);
+            pasyPasazerskie.add(new Pasazerski("Pasazerski" + str));
             numer += 50;
         }
 
@@ -54,7 +55,8 @@ public class PasyStartowe
 
         for(int i = 0; i < ile; i++)
         {
-            pasyTowarowe.add(new Towarowy("Towarowy" + numer));
+            String str = Integer.toString(numer);
+            pasyTowarowe.add(new Towarowy("Towarowy" + str));
             numer += 50;
         }
 
@@ -88,7 +90,8 @@ public class PasyStartowe
 
         for(int i =0; i < ile; i++)
         {
-            pasyAwionetki.add(new Awionetka("Awionetka" + numer));
+            String str = Integer.toString(numer);
+            pasyAwionetki.add(new Awionetka("Awionetka" + str));
             numer += 50;
         }
 

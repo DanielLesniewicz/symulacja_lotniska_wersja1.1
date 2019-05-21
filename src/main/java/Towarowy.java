@@ -19,4 +19,11 @@ public class Towarowy extends Samolot {
     {
         return ladownosc;
     }
+
+
+    public void rozladunek()
+    {
+        System.out.println("Rozladunek towaru: ");
+        iloscTowaru = 0;
+    }
 }

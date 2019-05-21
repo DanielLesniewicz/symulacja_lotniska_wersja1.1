@@ -25,4 +25,10 @@ public class Pasazerski extends Samolot {
         iloscPasazerowPoklad = iloscPasazerow;
         System.out.println("Wejscie pasazerow na poklad pomyslne.");
     }
+
+    public void rozladunek()
+    {
+        System.out.println("Wyjscie pasazerow z samolotu: ");
+        iloscPasazerowPoklad = 0;
+    }
 }

@@ -9,9 +9,7 @@ public class Lotnisko
     List<Towarowy> magazynTowarowych = new LinkedList<>();
     List<Awionetka> magazynAwionetek = new LinkedList<>();
 
-    List<Pasazerski> pasyPasazerskie = new ArrayList<>();
-    List<Towarowy> pasyTowarowe = new ArrayList<>();
-    List<Awionetka> pasyAwionetki = new ArrayList<>();
+    private PasyStartowe pasy = new PasyStartowe();
 
     public Lotnisko()
     {
@@ -87,5 +85,39 @@ public class Lotnisko
         }
         else
             return null;
+    }
+
+
+    public boolean dostepnoscPasyPasazerskie()
+    {
+        return pasy.dostepnoscPasyPasazerskie();
+    }
+
+    public boolean dostepnoscPasyTowarowe()
+    {
+        return pasy.dostepnoscPasyTowarowe();
+    }
+
+    public boolean dostepnoscPasyAwionetki()
+    {
+        return pasy.dostepnoscPasyAwionetki();
+    }
+
+    public void odstawDoMagazynu(Pasazerski pasazerski)
+    {
+        magazynPasazerskich.add(pasazerski);
+        System.out.println("Samolot odstawiono pomyslnie do magazynu");
+    }
+
+    public void odstawDoMagazynu(Towarowy towarowy)
+    {
+        magazynTowarowych.add(towarowy);
+        System.out.println("Samolot odstawiono pomyslnie do magazynu");
+    }
+
+    public void odstawDoMagazynu(Awionetka awionetka)
+    {
+        magazynAwionetek.add(awionetka);
+        System.out.println("Samolot odtsawiono pomyslnie do magazynu");
     }
 }

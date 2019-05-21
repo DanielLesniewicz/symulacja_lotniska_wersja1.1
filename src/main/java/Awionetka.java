@@ -19,4 +19,10 @@ public class Awionetka extends Samolot {
     {
         return iloscPasazerow;
     }
+
+    public void rozladunek()
+    {
+        System.out.println("Wyjscie osob z pokladu");
+        iloscPasazerowPoklad = 0;
+    }
 }
