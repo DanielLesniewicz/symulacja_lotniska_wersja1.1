@@ -1,5 +1,9 @@
+/** Klasa odpowedzialna za wybór typu samolotu */
+
 public class WyborSamolotu {
 
+    /** Zwraca/wybiera wylosowany typ samolotu
+     * @return Typ samolotu */
     public static int wybor()
     {
         int wybor = Generator.generuj(3);

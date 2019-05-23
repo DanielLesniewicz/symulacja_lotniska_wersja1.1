@@ -1,6 +1,7 @@
+/** Klasa odpowedzialna za starty samolotów */
 public class WiezaStartow extends WiezaKontroliLotow
 {
-
+    /** Przygotowuje start poprzez wybor samolotu i jego oddelegowanie z magazynu */
     public void PrzygotowanieDoStartu() throws InterruptedException
     {
         int rodzajSamolotu = WyborSamolotu.wybor();     // wybieramy 1 z 3 rodzajii samolotu
@@ -14,6 +15,8 @@ public class WiezaStartow extends WiezaKontroliLotow
             startSamolotu(lotnisko.wybierzZmagazynuAwionetka());
     }
 
+    /** Odpowiada za start samolotu pasażerskiego
+     * @param pasazerski Samolot typu: pasażerski */
     public void startSamolotu(Pasazerski pasazerski) throws InterruptedException
     {
         Thread.sleep(3000);
@@ -70,7 +73,8 @@ public class WiezaStartow extends WiezaKontroliLotow
     }
 
 
-
+    /** Odpowiada za start samolotu towarowego
+     * @param towarowy Samolot typu: towarowy */
 
     public void startSamolotu(Towarowy towarowy) throws InterruptedException {
 
@@ -128,6 +132,8 @@ public class WiezaStartow extends WiezaKontroliLotow
         }
     }
 
+    /** Odpowiada za start samolotu typu awionetka
+     * @param awionetka Samolot typu: awionetka */
     public void startSamolotu(Awionetka awionetka) throws InterruptedException {
 
         Thread.sleep(3000);

@@ -1,6 +1,7 @@
+/** Klasa odpowedzialna za lądowanie samolotów */
 public class WiezaLadowan extends WiezaKontroliLotow
 {
-
+    /** Przygotowuje lądowanie poprzez wybor samolotu, który ma podejść do lądowania */
     public void  przygotowanieDoLadowania() throws InterruptedException
     {
         int rodzajSamolotu = Generator.generuj(3);
@@ -14,6 +15,8 @@ public class WiezaLadowan extends WiezaKontroliLotow
             ladowanieAwionetka(wpowietrzu.ladujeAwionetka());
     }
 
+    /** Odpowiada za uziemienie samolotu pasażerskiego
+     * @param pasazerski Samolot typu: pasażerski */
     public void ladowaniePasazerski(Pasazerski pasazerski) throws InterruptedException {
         System.out.println("Dostpenosc pasow na lotnisku przeznaczonych dla samolotow pasazerskich: ");
 
@@ -43,6 +46,8 @@ public class WiezaLadowan extends WiezaKontroliLotow
         Thread.sleep(2000);
     }
 
+    /** Odpowiada za uziemienie samolotu towarowego
+     * @param towarowy Samolot typu: towarowy */
     public void ladowanieTowarowy(Towarowy towarowy) throws InterruptedException {
 
         System.out.println("Dostepnosc pasow na lotnisku dla samolotow transportowych: ");
@@ -73,6 +78,8 @@ public class WiezaLadowan extends WiezaKontroliLotow
 
     }
 
+    /** Odpowiada za uziemienie samolotu typu awionetka
+     * @param awionetka Samolot typu: awionetka */
     public void ladowanieAwionetka(Awionetka awionetka) throws InterruptedException {
 
         System.out.println("Dostepnosc pasow na lotnisku dla awionetek: ");

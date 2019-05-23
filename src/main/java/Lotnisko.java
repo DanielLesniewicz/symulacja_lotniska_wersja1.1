@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
+/** Klasa odpowiedzialna za lotnisko */
 public class Lotnisko
 {
 
@@ -11,6 +11,7 @@ public class Lotnisko
 
     private PasyStartowe pasy = new PasyStartowe();
 
+    /** Tworzy instancje, czyli konkretne samoloty*/
     public Lotnisko()
     {
         magazynPasazerskich.add(new Pasazerski("Pasazerski1"));
@@ -24,7 +25,8 @@ public class Lotnisko
     }
 
 
-
+    /** Wyświetla stan magazynu w zależności od rodzalu samolotu
+     * @param rodzaj Rodzaj magazynu*/
     public void wyswietlMagazyn(int rodzaj)
     {
         System.out.println("Samoloty dostepne w magazynie: ");
@@ -37,7 +39,9 @@ public class Lotnisko
     }
 
 
-
+    /** Zwraca stan magazynu w zależności od rodzalu samolotu
+     * @param rodzajSamolotu Rodzaj samolotu
+     * @return Ilość samolotów w magazynie*/
     public int ileWmagazynie(int rodzajSamolotu)
     {
         if(rodzajSamolotu == 1)
@@ -48,7 +52,7 @@ public class Lotnisko
             return  magazynAwionetek.size();
     }
 
-
+    /** Wybieraz z magazynu samolot pasażerski */
     public Pasazerski wybierzZmagazynuPasazerski()
     {
         int ile = ileWmagazynie(1);
@@ -62,6 +66,7 @@ public class Lotnisko
     }
 
 
+    /** Wybieraz z magazynu samolot towarowy */
     public Towarowy wybierzZmagazynuTowarowy()
     {
         int ile = ileWmagazynie(2);
@@ -74,7 +79,7 @@ public class Lotnisko
             return null;
     }
 
-
+    /** Wybieraz z magazynu awionetkę */
     public Awionetka wybierzZmagazynuAwionetka()
     {
         int ile = ileWmagazynie(3);
@@ -87,33 +92,39 @@ public class Lotnisko
             return null;
     }
 
-
+    /** Sparawdza dostępność samolotów pasażerskich */
     public boolean dostepnoscPasyPasazerskie()
     {
         return pasy.dostepnoscPasyPasazerskie();
     }
 
+    /** Sparawdza dostępność samolotów towarowych */
     public boolean dostepnoscPasyTowarowe()
     {
         return pasy.dostepnoscPasyTowarowe();
     }
 
+    /** Sparawdza dostępność samolotów typu awionetka */
     public boolean dostepnoscPasyAwionetki()
     {
         return pasy.dostepnoscPasyAwionetki();
     }
 
+    /** odstawia do magazynu samolot pasażerski */
     public void odstawDoMagazynu(Pasazerski pasazerski)
     {
         magazynPasazerskich.add(pasazerski);
         System.out.println("Samolot odstawiono pomyslnie do magazynu");
     }
 
+    /** odstawia do magazynu samolot towarowy */
     public void odstawDoMagazynu(Towarowy towarowy)
     {
         magazynTowarowych.add(towarowy);
         System.out.println("Samolot odstawiono pomyslnie do magazynu");
     }
+
+    /** odstawia do magazynu samolot typu awionetka */
 
     public void odstawDoMagazynu(Awionetka awionetka)
     {

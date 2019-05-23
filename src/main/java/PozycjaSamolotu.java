@@ -1,5 +1,10 @@
+/**
+ * Klasa odpowiedzialna za wygenerowanie pozycji samolotu: na ziemi bądż w powietrzu
+ * */
+
 public class PozycjaSamolotu {
 
+    /** Metoda generująca pozycję i związane z nią działania */
     public static int podajPozycje()
     {
         int pozycja = Generator.generuj(2);

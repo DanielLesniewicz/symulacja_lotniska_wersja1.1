@@ -1,5 +1,10 @@
+/**
+ * Klasa odpowiedzialna za wyświetlanie odliczania
+ * */
 public class Odliczanie {
 
+    /** Wyświetla odliczanie
+     * @param sekundy Ilość sekund do wyświetlenia*/
     public static void odliczaj(int sekundy)
     {
         long current = System.currentTimeMillis();

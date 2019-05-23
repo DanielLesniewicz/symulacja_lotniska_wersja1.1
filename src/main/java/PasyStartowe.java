@@ -2,17 +2,26 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Klasa odpowiedzialana za pasy startowe
+ * */
+
 public class PasyStartowe
 {
+    /** Ilość pasów dla samolotów pasażerskich*/
     private int liczbaPasowPasazerskie = 5;
+    /** Ilość pasów dla samolotów towarowych*/
     private int liczbaPasowTowarowe = 6;
+    /** Ilość pasów dla awionetek*/
     private int liczbaPasowAwionetka = 4;
-    private int numer = 9550;               //zmienna potrzebna do nazw samolotow
+    /** Zmienna wykorzystywana do nazw samolotów*/
+    private int numer = 9550;
 
     List<Pasazerski> pasyPasazerskie = new ArrayList<>(liczbaPasowPasazerskie);
     List<Towarowy> pasyTowarowe = new ArrayList<>(liczbaPasowTowarowe);
     List<Awionetka> pasyAwionetki = new ArrayList<>(liczbaPasowAwionetka);
 
+    /** Generuje dostępne pasy (sytuację) na lotnisku dla samolotu pasażerskiego*/
     public boolean dostepnoscPasyPasazerskie()
     {
         int ile = Generator.generuj(liczbaPasowPasazerskie);
@@ -47,6 +56,7 @@ public class PasyStartowe
         }
     }
 
+    /** Generuje dostępne pasy (sytuację) na lotnisku dla samolotu towarowego*/
     public boolean dostepnoscPasyTowarowe()
     {
         int ile  = Generator.generuj(liczbaPasowTowarowe);
@@ -82,6 +92,7 @@ public class PasyStartowe
         }
     }
 
+    /** Generuje dostępne pasy (sytuację) na lotnisku dla awionetki*/
     public boolean dostepnoscPasyAwionetki()
     {
         int ile = Generator.generuj(liczbaPasowAwionetka);

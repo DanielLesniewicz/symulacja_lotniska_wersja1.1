@@ -1,8 +1,15 @@
+/**
+ * Klasa odpowiedzialna za funkcjonalność samolotu wowarowego
+ */
 public class Towarowy extends Samolot {
 
-    private int ladownosc;          // maksymalna liczba towaru na pokladzie
-    private int iloscTowaru;        // obecna liczba towaru na pokladzie
+    /** Maksymalna liczba towaru na pokładzie */
+    private int ladownosc;
+    /** Obecna ilość towaru na pokładzie */
+    private int iloscTowaru;
 
+    /** Inicjalizuje samolot towarowy
+     * @param nazwa Nazwa samolotu*/
     public Towarowy(String nazwa)
     {
         super(nazwa, 1000, 4,5,3);
@@ -10,17 +17,21 @@ public class Towarowy extends Samolot {
         iloscTowaru = Generator.generuj(ladownosc);
     }
 
+    /** Mówi o iloci towaru na pokładzie
+     * @return Ilość towaru znajdującego się na pokładzie */
     public int iloscTowaruPoklad()
     {
         return iloscTowaru;
     }
 
+    /** Zwraca maksymalną ładowność
+     * @return  Ładowność samolotu towarowego*/
     public int ladownoscMax()
     {
         return ladownosc;
     }
 
-
+    /** Rozładowuje towar */
     public void rozladunek()
     {
         System.out.println("Rozladunek towaru: ");

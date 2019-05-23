@@ -1,10 +1,17 @@
+/**
+ * Klasa odpowiedzialna za proces symulacji
+ */
 public class Start
 {
-
+    /**Inicjalizacja lotniska */
     public static Lotnisko lotnisko = new Lotnisko();
 
+    /**
+     * Metoda odpowiedzialna na wywołanie przebiegu zdarzeń w symulacji
+     */
     public static void main(String[] args) throws InterruptedException
     {
+        /** Ilość samolotów, które wezmą udział w symulacji */
         final int ileSamolotow = 10 ;        // przechowuje dla ilu cykli samolotu mamy wykonac symulacje
 
         WiezaStartow wiezaStartow = new WiezaStartow();
